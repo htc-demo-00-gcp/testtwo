@@ -5,6 +5,8 @@ workloads:
         type: bucket
       account:
         type: k8s-service-account
+      queue:
+        type: queue
       namespace:
         type: k8s-namespace
         id: main
@@ -12,3 +14,5 @@ workloads:
       BUCKET_NAME: ${resources.bucket.outputs.name}
       SERVICE_ACCOUNT: ${resources.account.outputs.service_account_name}
       NAMESPACE: ${resources.namespace.outputs.namespace}
+      QUEUE_NAME: ${resources.queue.outputs.name}
+
